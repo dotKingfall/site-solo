@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/player.js"></script>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/player.css">
+   
+  <title>HearMe</title>
+
+</head>
+<body>
+  <span class="separator"></span>
+  <img src="helpers/indexbutton.svg" class="logo" onclick="showPlayer(); playsong()">
+  <div id="tabs">
+    <div onclick="gotoPage(0)" class="tabOption" onmouseover="te(0, 1, this, '4em')" onmouseleave="te(0, 0, this)">
+      <div class="tabName">Página Inicial</div>
+      <span class="underline"></span>
+    </div>
+    <div onclick="gotoPage(1)" class="tabOption" onmouseover="te(1, 1, this, '2.7em')" onmouseleave="te(1, 0, this)">
+      <div class="tabName">Descobrir</div>
+      <span class="underline"></span>
+    </div>
+    <div onclick="gotoPage(2)" class="tabOption" onmouseover="te(2, 1, this, '1.3em')" onmouseleave="te(2, 0, this)">
+      <div class="tabName">Você</div>
+      <span class="underline"></span>
+    </div>
+    <div onclick="gotoPage(3)" class="tabOption" onmouseover="te(3, 1, this, '1.6em')" onmouseleave="te(3, 0, this)">
+      <div class="tabName">Sobre</div>
+      <span class="underline"></span>
+    </div>
+    <div onclick="gotoPage(-1)" class="compOption" onmouseover="ate(4, 1, this)" onmouseleave="ate(4, 0, this)">
+      <div class="tabName">Ajuda</div>
+    </div>
+    <div onclick="gotoPage(-2)" class="compOption" onmouseover="ate(5, 1, this)" onmouseleave="ate(5, 0, this)">
+      <div class="tabName">Se Inscrever / Entrar</div>
+    </div>
+  </div>
+
+  <audio id="song" src="none"></audio>
+  <div id="workablescreen"></div>
+
+  <div id="playerws">
+    <img id="album_cover" src="helpers/player/default_cover.jpg" width="140px">
+    <div id="name_container">
+      <div id="song_name">Nenhuma música sendo tocada no momento.</div>
+      <span id="copybutton" onclick="copysongname()">
+        <img src="helpers/player/copy.svg" width="10px">
+        <span>COPIAR</span>
+      </span>
+      <br>
+      <div id="time">
+        <div class="current">0:00</div>
+        <div class="duration">0:00</div>
+        <input type="range" id="seek-slider" max="100" value="0">
+      </div>
+      <div></div>
+      <div id="volume">
+        <img src="helpers/player/sound.svg" width="100px">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
