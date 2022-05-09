@@ -59,7 +59,16 @@
   transition: filter .2s;
 }
 
+#volume img{
+  filter: brightness(0) invert(1);
+  transition: filter .2s;
+}
+
 #copybutton:hover img{
+  filter: none;
+}
+
+#volume:hover img{
   filter: none;
 }
 
@@ -67,10 +76,18 @@
   color: rgb(191, 64, 191);
 }
 
-#seek-slider{
+#seek-bar{
   margin-top: 5px;
   float: left;
   width: 100%;
+}
+
+#volume-bar{
+  width: 85.5%;
+}
+
+#volumebutton{
+  /**/
 }
 
 .duration, .current{
