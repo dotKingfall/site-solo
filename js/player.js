@@ -50,11 +50,27 @@ function showPlayer(){
 }
 
 //Show volume percentage
-function svp(){
+//AJEITAR ESSA DESGRAÇA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+function svp(to){
   var current = document.getElementById("volume-bar").value;
-  document.getElementById("volume-image").innerHTML = "aa";
+  var vn = document.getElementById("volume-image");
 
-  setTimeout(function(){
-    document.getElementById("volume-image").innerHTML = '<img src="helpers/player/sound.svg" width="20px">';
-  }, 1000);
+  vn.innerHTML = `<div width='20px' class='vln'>${current}</div>`;
+
+  //to = setTimeout(() => {
+  //  vn.innerHTML = '<img src="helpers/player/sound.svg" width="20px">';
+  //}, 500);
+
+  svpreturn(current);
+
+  function svpreturn(n){
+    vn.style.paddingLeft = "0px";
+    vn.style.paddingRight = "0px";
+    if(n < 10){
+      vn.style.paddingLeft = "0px";
+      vn.style.paddingRight = "0px";
+    }
+    else if(n < 100){}
+    return;
+  }
 }
