@@ -83,16 +83,15 @@
 }
 
 #volume-bar{
-  width: 85.5%;
+  width: 88%;
 }
 
-#volumebutton{
-  /**/
+#volume-image{
+  font-size: 22px;
 }
 
 .duration, .current{
   opacity: 70%;
-  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
 }
@@ -103,6 +102,13 @@
 
 .current{
   float: left
+}
+
+/*volume number*/
+.vln{
+  float: left;
+  width: 20px;
+  text-align: center;
 }
 
 @keyframes songtitle {
