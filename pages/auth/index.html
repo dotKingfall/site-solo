@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="style/main.css">
+<script type="text/javascript" src="js/main.js"></script>
+
+<div style="text-align: center;" id="limit">
+  <form id="fst" name="enteraccount">
+    <input type="text" class="fields" id="uid" name="name" maxlength="80" placeholder="Nome de usuário / E-mail" style="text-overflow: ellipsis;">
+    <br>
+    <input type="password" class="fields" id="uid_pw" name="pw" maxlength="50" placeholder="Senha">
+    <img src="helpers/open-eye.svg" class="seepwbutton" onclick="pwvisibility(this, 1)">
+    <br>
+    <div>
+      <button type="submit" class="subbutton" form="enteraccount" onclick="checklogin()">Entrar</button>
+      <button class="newaccbutton" type="reset" onclick="createaccbutton()">Se cadastrar</button>
+    </div>
+  </form>
+  <form id="scd" style="visibility: hidden;" name="createaccount">
+    <input type="text" class="fields" id="newuid" name="name" maxlength="80" placeholder="E-mail" style="text-overflow: ellipsis;">
+    <br>
+    <input type="password" class="fields" id="newpw" name="pw" maxlength="50" placeholder="Senha"> 
+    <br>
+    <span style="z-index: 2;" id="cpwmessage"></span>
+    <input type="password" class="fields" id="cpw" name="confirmpw" maxlength="50" placeholder="Confirmar senha">
+    <img src="helpers/open-eye.svg" class="seepwbutton" onclick="pwvisibility(this, 2)">
+    <br>
+    <button type="submit" form="createaccount" class="subbutton" onclick="checkpw()">Se Cadastrar</button>
+  </form>
+</div>
