@@ -49,6 +49,12 @@ function showPlayer(){
   }
 }
 
-function showtime(){
-  //
+//Show volume percentage
+function svp(){
+  var current = document.getElementById("volume-bar").value;
+  document.getElementById("volume-image").innerHTML = "aa";
+
+  setTimeout(function(){
+    document.getElementById("volume-image").innerHTML = '<img src="helpers/player/sound.svg" width="20px">';
+  }, 1000);
 }
