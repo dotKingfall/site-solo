@@ -1,0 +1,86 @@
+form{
+  margin-top: 5%;
+}
+
+.seepwbutton{
+  width: 25px;
+  height: 15px;
+  margin-left: 10px;
+  transform: scale(1.1);
+  cursor: pointer;
+  position: absolute;
+  transform: scale(1.1) translateY(90%);
+}
+
+.subbutton{
+  margin-top: 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 12em;
+  height: 2em;
+}
+
+.newaccbutton{
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.newaccbutton:hover{
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.fields{
+  background: linear-gradient(rgb(250, 249, 246), rgb(249, 246, 238));
+  position: relative;
+  border: none;
+  outline: none;
+  color: rgb(191, 64, 191);
+  margin-bottom: 30px;
+  border-radius: 10px 5px 10px 5px;
+  text-align: center;
+  font-size: medium;
+  height: 2.8em;
+  width: 16em;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#cpw{
+  animation: shake .18s linear infinite;
+  animation-play-state: paused;
+}
+
+#cpwmessage{
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s;
+  transition-timing-function: ease-in;
+  padding: 3px;
+
+  color: rgba(255, 255, 255, .95);
+  background-color: rgb(115, 39, 115);
+  border-radius: 5px;
+}
+
+#limit{
+  overflow: hidden;
+  height: 100%;
+}
+
+@keyframes shake{
+  0%{transform: translateX(0px);}
+  20%{transform: translateX(2px);}
+  40%{transform: translateX(-2px);}
+  60%{transform: translateX(2px);}
+  80%{transform: translateX(-2px);}
+  100%{transform: translateX(0px);}
+}
