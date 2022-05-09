@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+
+#playerws{
+  position: fixed;
+  z-index: 10;
+  background: rgb(15, 15, 15);
+  height: 100%;
+  width: 180px;
+  top: 4.4vmax;
+  transform: translateX(-180px);
+  visibility: hidden;
+  transition: transform .4s, visibility .4s;
+  border-width: medium;
+  border-radius: 0px 4px 4px 0px;
+}
+
+#name_container{
+  margin-top: 10px;
+  margin-left: 6px;
+  width: 168px;
+  color: white;
+  font-size: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+#song_name{
+  margin-left: auto;
+  margin-right: auto;
+  width: min-content;
+  animation: songtitle 8s linear infinite;
+  animation-play-state: paused;
+}
+
+#album_cover{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#playbutton{
+  width: 35px;
+  height: 35px;
+}
+
+#copybutton{
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  float: right;
+  display: block;
+  transition: color .2s;
+  transition-timing-function: ease-out;
+}
+
+#copybutton img{
+  filter: grayscale(100%);
+  transition: filter .2s;
+}
+
+#copybutton:hover img{
+  filter: none;
+}
+
+#copybutton:hover{
+  color: rgb(191, 64, 191);
+}
+
+#seek-slider{
+  margin-top: 5px;
+  float: left;
+  width: 100%;
+}
+
+.duration, .current{
+  opacity: 70%;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+.duration{
+  float: right;
+}
+
+.current{
+  float: left
+}
+
+@keyframes songtitle {
+  to{
+    transform: translateX(-100%);
+  }
+}

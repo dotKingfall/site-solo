@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:'Stint Ultra Condensed';
+  overflow: hidden;
+}
+
+#tabs{
+  background-color: black;
+  background-image: linear-gradient(to right, black , rgb(15, 15, 15), black);
+  width: 100vw;
+  height: 4.4vmax;
+  padding-left: 10px;
+}
+
+#workablescreen{
+  height: 100%;
+  width: 100%;
+}
+
+.tabOption{
+  font-family:'Stint Ultra Condensed';
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.8vmax;
+  cursor: pointer;
+  height: 75%;
+  float: left;
+  padding-left: 2vmax;
+  padding-top: 1vmax;
+}
+
+.compOption{
+  font-family:'Stint Ultra Condensed';
+  color: white;
+  font-size: 1.8vmax;
+  cursor: pointer;
+  float: right;
+  margin-right: 2vmax;
+  margin-top: 1.2vmax;
+}
+
+.tabName{
+  transition-property: transform, color, font-size;
+  transition-duration: .3s;
+}
+
+.separator{
+  border-right: .4vmax solid rgb(191, 64, 191);
+  height: 3.5vmax;
+  margin-top: .45vmax;
+  margin-left: 3.7vmax;
+  float: left;
+  position: absolute;
+}
+
+.underline{
+  margin: 0;
+  padding: 0;
+  border-top: solid rgb(191, 64, 191);
+  width: 0px;
+  height: 7px;
+  border-radius: 1px;
+  position: absolute;
+  transition-timing-function: ease-out;
+  transform-origin: center right;
+  transition: width .6s;
+}
+
+.logo{
+  height: 4.4vmax;
+  width: 4.2vmax;
+  background-color: black;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  float: left;
+  transition: background-color .6s;
+}
+
+.logo:hover{
+  background-color: rgb(191, 64, 191);
+}
