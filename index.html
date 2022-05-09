@@ -55,11 +55,12 @@
       <div id="time">
         <div class="current">0:00</div>
         <div class="duration">0:00</div>
-        <input type="range" id="seek-slider" max="100" value="0">
+        <input type="range" id="seek-bar" max="100" value="0">
       </div>
-      <div></div>
+      <br>
       <div id="volume">
-        <img src="helpers/player/sound.svg" width="100px">
+        <span id="volume-image"><img src="helpers/player/sound.svg" width="20px"></span>
+        <input type="range" id="volume-bar" max="100" value="100" oninput="svp()">
       </div>
     </div>
   </div>
