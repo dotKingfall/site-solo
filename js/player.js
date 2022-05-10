@@ -49,28 +49,26 @@ function showPlayer(){
   }
 }
 
-//Show volume percentage
-//AJEITAR ESSA DESGRAÇA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-function svp(to){
-  var current = document.getElementById("volume-bar").value;
-  var vn = document.getElementById("volume-image");
+var currentVol = 100;
+var no_sound = 0;
+function volControl(vol){
+  document.getElementById('volumenumber').innerText = vol;
+  document.getElementById("volume").children[1].src = "helpers/player/sound.svg";
+  no_sound = 0;
+  currentVol = vol;
+}
 
-  vn.innerHTML = `<div width='20px' class='vln'>${current}</div>`;
-
-  //to = setTimeout(() => {
-  //  vn.innerHTML = '<img src="helpers/player/sound.svg" width="20px">';
-  //}, 500);
-
-  svpreturn(current);
-
-  function svpreturn(n){
-    vn.style.paddingLeft = "0px";
-    vn.style.paddingRight = "0px";
-    if(n < 10){
-      vn.style.paddingLeft = "0px";
-      vn.style.paddingRight = "0px";
-    }
-    else if(n < 100){}
+function volIcon(el){
+  if(no_sound != 0){
+    el.src = "helpers/player/sound.svg";
+    document.getElementById("volume-bar").value = currentVol;
+    document.getElementById('volumenumber').innerText = currentVol;
+    no_sound = 0;
     return;
   }
+
+  el.src = "helpers/player/no-sound.svg";
+  document.getElementById("volume-bar").value = 0;
+  document.getElementById('volumenumber').innerText = 0;
+  no_sound = 1;
 }
