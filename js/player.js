@@ -49,6 +49,18 @@ function showPlayer(){
   }
 }
 
+var is_paused = false;
+function play_pause(el){
+  if(!is_paused){
+    el.src = "helpers/player/pause.svg";
+    is_paused = true;
+  }
+  else{
+    el.src = "helpers/player/play.svg";
+    is_paused = false;
+  }
+}
+
 var currentVol = 100;
 var no_sound = 0;
 function volControl(vol){
