@@ -14,6 +14,10 @@
   border-radius: 0px 4px 4px 0px;
 }
 
+#pin_player{
+  color: white;
+}
+
 #name_container{
   margin-top: 10px;
   margin-left: 6px;
@@ -36,6 +40,7 @@
 #album_cover{
   margin-top: 20px;
   margin-left: 20px;
+  display: inline;
 }
 
 #playbutton{
@@ -107,6 +112,43 @@
 
 .current{
   float: left
+}
+
+.passbutton{
+  cursor: pointer;
+  transition: width .1s;
+}
+
+.passbutton:hover{
+  width: 25px;
+}
+
+/*INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA*/
+input[type = "range"]{
+  -webkit-appearance: none;
+  background-color: rgb(30, 30, 30);
+}
+
+input[type = "range"]::-webkit-slider-runnable-track{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+
+input[type = "range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  margin: -5px 0 0 0;
+  width: 10px;
+  height: 15px;
+  background-color: black;
+  border: 1px solid rgb(191, 64, 191);
+}
+
+/*INPUT RANGE END INPUT RANGE END INPUT RANGE END INPUT RANGE END INPUT RANGE END INPUT RANGE END INPUT*/
+
+th{
+  width: 60px;
 }
 
 @keyframes songtitle {
