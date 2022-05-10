@@ -47,6 +47,7 @@
     <!--Adicionar uma div que fará o papel de uma checkbox e adcionar o novo svg ao lado.
     depois disso, adicionar um listener na id do player e dar a opção de permanecer no topo
     ou fechar o player quando clicado fora-->
+    <!--Album cover, song name and copy button-->
     <img id="album_cover" src="helpers/player/default_cover.jpg" width="140px">
     <div id="name_container">
       <div id="song_name">Nenhuma música sendo tocada no momento.</div>
@@ -55,18 +56,30 @@
         <span>COPIAR</span>
       </span>
       <br>
+
+      <!--audio seeker-->
       <div id="time">
         <div class="current">0:00</div>
         <div class="duration">0:00</div>
         <input type="range" id="seek-bar" max="100" value="0">
       </div>
       <br>
+      <!--Volume seeker-->
       <div id="volume">
         <span id="volumenumber">100</span>
-        <img src="helpers/player/sound.svg" width="20px" style="cursor: pointer; margin-top: 17px;" onclick="volIcon(this)">
+        <img src="helpers/player/sound.svg" width="20px" style="cursor: pointer;" onclick="volIcon(this)">
         <input type="range" id="volume-bar" max="100" value="100" oninput="volControl(this.value)">
       </div>
     </div>
+
+    <!--Play and pause buttons-->
+    <table style="width: 100%; margin-top: 10px;">
+      <tr style="height: 35px;">
+        <th><img class="passbutton" src="helpers/player/nextprevbutton.svg" width="20px" style="transform: rotate(180deg);"></th>
+        <th id="playpause"><img class="passbutton" src="helpers/player/play.svg" width="20px" onclick="play_pause(this)"></th>
+        <th><img class="passbutton" width="20px" src="helpers/player/nextprevbutton.svg"></th>
+      </tr>
+    </table>
   </div>
 </body>
 </html>
