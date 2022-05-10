@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 10;
   background: rgb(15, 15, 15);
-  height: 100%;
+  height: max-content;
   width: 180px;
   top: 4.4vmax;
   transform: translateX(-180px);
@@ -68,7 +68,7 @@
   filter: none;
 }
 
-#volume:hover img{
+#volume img:hover{
   filter: none;
 }
 
@@ -83,11 +83,16 @@
 }
 
 #volume-bar{
-  width: 88%;
+  width: 85.6%;
 }
 
-#volume-image{
-  font-size: 22px;
+/*volume number*/
+#volumenumber{
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  letter-spacing: .5px;
+  left: 50%;
 }
 
 .duration, .current{
@@ -102,13 +107,6 @@
 
 .current{
   float: left
-}
-
-/*volume number*/
-.vln{
-  float: left;
-  width: 20px;
-  text-align: center;
 }
 
 @keyframes songtitle {
