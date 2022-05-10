@@ -59,8 +59,9 @@
       </div>
       <br>
       <div id="volume">
-        <span id="volume-image"><img src="helpers/player/sound.svg" width="20px"></span>
-        <input type="range" id="volume-bar" max="100" value="100" oninput="svp()">
+        <span id="volumenumber">100</span>
+        <img src="helpers/player/sound.svg" width="20px" style="cursor: pointer; margin-top: 17px;" onclick="volIcon(this)">
+        <input type="range" id="volume-bar" max="100" value="100" oninput="volControl(this.value)">
       </div>
     </div>
   </div>
