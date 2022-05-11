@@ -133,15 +133,87 @@
   width: 23px;
 }
 
-/**/
-
+/*CUSTOM CHECKBOX CUSTOM CHECKBOX CUSTOM CHECKBOX CUSTOM CHECKBOX CUSTOM CHECKBOX CUSTOM CHECKBOX CUSTOM*/
 #pinbutton{
-  cursor: pointer;
   position: absolute;
-  color: rgb(191, 64, 191);
+  top: 5.5%;
+  left: 67.5%;
 }
 
-/**/
+#pincheck {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#pincheck:not([disabled]):active + .container,
+#pincheck:not([disabled]):focus + .container {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container {
+  background: #0f0f0f;
+  border-radius: 0px 0px 0px 10px;
+  border-left: 1px solid rgb(191, 64, 191);
+  border-bottom: 1px solid rgb(191, 64, 191); 
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 21px;
+  margin-right: 12px;
+  position: relative;
+  width: 37.5px;
+}
+
+.checked {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #1e1e1e;
+  border-radius: 15px;
+  bottom: 3px;
+  left: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  -webkit-transition: .2s;
+  transition: .2s;
+  width: 15px;
+}
+
+.checkmark {
+  opacity: 0;
+  /*height: $container_size;
+  width: $container_size;*/
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+#pincheck:checked + .container .checked {
+  background: #bf40bf;
+  -webkit-transform: translateX(16.5px);
+          transform: translateX(16.5px);
+}
+
+#pincheck:checked + .container .checked .checkmark {
+  opacity: 1;
+  -webkit-transition: opacity .2 ease-in-out;
+  transition: opacity .2 ease-in-out;
+}
+
+/*CHECKBOX END CHECKBOX END CHECKBOX END CHECKBOX END CHECKBOX END CHECKBOX ENDCHECKBOX ENDCHECKBOX END */
 
 /*INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA*/
 input[type = "range"]{
