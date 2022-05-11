@@ -1,0 +1,67 @@
+//https://codepen.io/xirclebox/pen/wvGmjbV
+
+$container_size: 15px;
+$container_focused: 0px 0px 2px rgb(30, 30, 30);
+$container_height: $container_size + 6;
+$container_width: $container_size * 2.5;
+$container_background: rgb(15, 15, 15);
+$checked_background: rgb(191, 64, 191);
+
+#pincheck{
+  clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+
+  // This style sets the focus ring. The ":not([disabled])" prevents the focus ring from creating a flash when the element is clicked.
+	&:not([disabled]):active + .container,
+	&:not([disabled]):focus + .container {
+		box-shadow: none;
+	}
+}
+
+.container{
+  background: $container_background;
+	border: $container_focused;
+	border-radius: 100px;
+	cursor: pointer;
+	display: flex;
+	height: $container_height;
+	margin-right: 12px;
+	position: relative;
+	width: $container_width;
+}
+
+.checked{
+  align-items: center;
+	background: rgb(30, 30, 30);
+	border-radius: $container_size;
+	bottom: 2px;
+	display: flex;
+	height: $container_size;
+	justify-content: center;
+	left: 2px;
+	position: absolute;
+	transition: .2s;
+	width: $container_size;
+}
+
+.checkmark{
+  opacity: 0;
+  /*height: $container_size;
+  width: $container_size;*/
+  transition: opacity .2s ease-in-out;
+}
+
+#pincheck:checked + .container .checked{
+  background: $checked_background;
+  transform: translateX($container_width - $container_height);
+
+  .checkmark{
+    opacity: 1;
+    transition: opacity .2 ease-in-out;
+  }
+}
