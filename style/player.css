@@ -14,10 +14,6 @@
   border-radius: 0px 4px 4px 0px;
 }
 
-#pin_player{
-  color: white;
-}
-
 #name_container{
   margin-top: 10px;
   margin-left: 6px;
@@ -41,11 +37,6 @@
   margin-top: 20px;
   margin-left: 20px;
   display: inline;
-}
-
-#playbutton{
-  width: 35px;
-  height: 35px;
 }
 
 #copybutton{
@@ -82,13 +73,13 @@
 }
 
 #seek-bar{
-  margin-top: 5px;
+  margin-top: 10px;
   float: left;
-  width: 100%;
+  width: 95%;
 }
 
 #volume-bar{
-  width: 85.6%;
+  width: 80%;
 }
 
 /*volume number*/
@@ -123,10 +114,25 @@
   width: 25px;
 }
 
+/**/
+
+#pinbutton{
+  cursor: pointer;
+  position: absolute;
+  color: rgb(191, 64, 191);
+}
+
+/**/
+
 /*INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA INPUT RANGE AREA*/
 input[type = "range"]{
   -webkit-appearance: none;
   background-color: rgb(30, 30, 30);
+}
+
+input[type="range"]:active::-webkit-slider-thumb{
+  transform: scale(1.1);
+  background: rgb(191, 64, 191)
 }
 
 input[type = "range"]::-webkit-slider-runnable-track{
