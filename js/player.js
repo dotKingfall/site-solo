@@ -52,11 +52,11 @@ function showPlayer(){
 var is_paused = false;
 function play_pause(el){
   if(!is_paused){
-    el.src = "helpers/player/pause.svg";
+    el.children[0].src = "helpers/player/pause.svg";
     is_paused = true;
   }
   else{
-    el.src = "helpers/player/play.svg";
+    el.children[0].src = "helpers/player/play.svg";
     is_paused = false;
   }
 }
@@ -85,6 +85,7 @@ function volIcon(el){
   no_sound = 1;
 }
 
+//ajeitar isso
 var pin_player = true;
 function selectpin(){
   if(pin_player === true){
