@@ -91,6 +91,17 @@
   left: 50%;
 }
 
+#playpause{
+  border-left: 1px solid rgb(30, 30, 30);
+  border-right: 1px solid rgb(30, 30, 30);;
+}
+
+.mainbuttons{
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
 .duration, .current{
   opacity: 70%;
   font-family: Arial, Helvetica, sans-serif;
@@ -105,13 +116,21 @@
   float: left
 }
 
-.passbutton{
+.mainbuttons{
+  margin-bottom: 5px;
+}
+
+.mainbuttons th{
+  width: 60px;
   cursor: pointer;
+}
+
+.mainbuttons th img{
   transition: width .1s;
 }
 
-.passbutton:hover{
-  width: 25px;
+.mainbuttons th:hover img{
+  width: 23px;
 }
 
 /**/
@@ -152,10 +171,6 @@ input[type = "range"]::-webkit-slider-thumb{
 }
 
 /*INPUT RANGE END INPUT RANGE END INPUT RANGE END INPUT RANGE END INPUT RANGE END INPUT RANGE END INPUT*/
-
-th{
-  width: 60px;
-}
 
 @keyframes songtitle {
   to{
