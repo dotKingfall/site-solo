@@ -48,6 +48,10 @@
     depois disso, adicionar um listener na id do player e dar a opção de permanecer no topo
     ou fechar o player quando clicado fora-->
     <!--Album cover, song name and copy button-->
+    <div id="pinbutton" onclick="selectpin(this)">
+      <img src="helpers/player/pin.svg" width="12px">
+      <input type="checkbox" oninput="selectpin()" checked>
+    </div>
     <img id="album_cover" src="helpers/player/default_cover.jpg" width="140px">
     <div id="name_container">
       <div id="song_name">Nenhuma música sendo tocada no momento.</div>
