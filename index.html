@@ -49,8 +49,16 @@
     ou fechar o player quando clicado fora-->
     <!--Album cover, song name and copy button-->
     <div id="pinbutton" onclick="selectpin(this)">
-      <img src="helpers/player/pin.svg" width="12px">
-      <input type="checkbox" oninput="selectpin()" checked>
+      <label>
+        <input id="pincheck" type="checkbox" oninput="selectpin()" checked>
+        <span class="container">
+          <span class="checked">
+            <span class="checkmark">
+              <img src="helpers/player/pin.svg" width="10px">
+            </span>
+          </span>
+        </span>
+      </label>
     </div>
     <img id="album_cover" src="helpers/player/default_cover.jpg" width="140px">
     <div id="name_container">
