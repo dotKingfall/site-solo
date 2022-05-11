@@ -84,3 +84,13 @@ function volIcon(el){
   document.getElementById('volumenumber').innerText = 0;
   no_sound = 1;
 }
+
+var pin_player = true;
+function selectpin(){
+  if(pin_player === true){
+    pin_player = false;
+  }
+  else{
+    pin_player = true;
+  }
+}
