@@ -69,7 +69,7 @@ body, html {
   transition: width .6s;
 }
 
-.logo{
+#logo{
   height: 4.4vmax;
   width: 4.2vmax;
   background-color: black;
@@ -80,6 +80,6 @@ body, html {
   transition: background-color .6s;
 }
 
-.logo:hover{
+#logo:hover{
   background-color: rgb(191, 64, 191);
 }
