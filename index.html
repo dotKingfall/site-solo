@@ -14,28 +14,28 @@
 </head>
 <body>
   <span class="separator"></span>
-  <img src="helpers/indexbutton.svg" class="logo" onclick="showPlayer(); playsong()">
+  <img src="helpers/indexbutton.svg" id="logo" onclick="showPlayer()">
   <div id="tabs">
-    <div onclick="gotoPage(0)" class="tabOption" onmouseover="te(0, 1, this, '4em')" onmouseleave="te(0, 0, this)">
+    <div tabindex="0" onclick="gotoPage(0)" class="tabOption" onmouseover="te(0, 1, this, '4em')" onmouseleave="te(0, 0, this)">
       <div class="tabName">Página Inicial</div>
       <span class="underline"></span>
     </div>
-    <div onclick="gotoPage(1)" class="tabOption" onmouseover="te(1, 1, this, '2.7em')" onmouseleave="te(1, 0, this)">
+    <div tabindex="1" onclick="gotoPage(1)" class="tabOption" onmouseover="te(1, 1, this, '2.7em')" onmouseleave="te(1, 0, this)">
       <div class="tabName">Descobrir</div>
       <span class="underline"></span>
     </div>
-    <div onclick="gotoPage(2)" class="tabOption" onmouseover="te(2, 1, this, '1.3em')" onmouseleave="te(2, 0, this)">
+    <div tabindex="2" onclick="gotoPage(2)" class="tabOption" onmouseover="te(2, 1, this, '1.3em')" onmouseleave="te(2, 0, this)">
       <div class="tabName">Você</div>
       <span class="underline"></span>
     </div>
-    <div onclick="gotoPage(3)" class="tabOption" onmouseover="te(3, 1, this, '1.6em')" onmouseleave="te(3, 0, this)">
+    <div tabindex="3" onclick="gotoPage(3)" class="tabOption" onmouseover="te(3, 1, this, '1.6em')" onmouseleave="te(3, 0, this)">
       <div class="tabName">Sobre</div>
       <span class="underline"></span>
     </div>
-    <div onclick="gotoPage(-1)" class="compOption" onmouseover="ate(4, 1, this)" onmouseleave="ate(4, 0, this)">
+    <div tabindex="-1" onclick="gotoPage(-1)" class="compOption" onmouseover="ate(4, 1, this)" onmouseleave="ate(4, 0, this)">
       <div class="tabName">Ajuda</div>
     </div>
-    <div onclick="gotoPage(-2)" class="compOption" onmouseover="ate(5, 1, this)" onmouseleave="ate(5, 0, this)">
+    <div tabindex="-2" onclick="gotoPage(-2)" class="compOption" onmouseover="ate(5, 1, this)" onmouseleave="ate(5, 0, this)">
       <div class="tabName">Se Inscrever / Entrar</div>
     </div>
   </div>
@@ -43,12 +43,12 @@
   <audio id="song" src="none"></audio>
   <div id="workablescreen"></div>
 
-  <div id="playerws">
+  <div id="playerws" tabindex="-99" onfocusout="pin_condition()">
     <!--Adicionar uma div que fará o papel de uma checkbox e adcionar o novo svg ao lado.
     depois disso, adicionar um listener na id do player e dar a opção de permanecer no topo
     ou fechar o player quando clicado fora-->
     <!--Album cover, song name and copy button-->
-    <div id="pinbutton" onclick="selectpin(this)">
+    <div id="pinbutton">
       <label>
         <input id="pincheck" type="checkbox" oninput="selectpin()" checked>
         <span class="container">
@@ -68,7 +68,6 @@
         <span>COPIAR</span>
       </span>
       <br>
-
       <!--audio seeker-->
       <div id="time">
         <div class="current">0:00</div>
