@@ -1,12 +1,13 @@
-var songname = "None";
-var singer = "None";
-var lyricswriter = "None";
-var date = "None";
-var vocalprod = "None";
-var copyright = "None";
-var distributor = "None";
-var duration = "00s";
-//SONG INFO END
+const song = {
+  name: "None",
+  singer: "None",
+  version: "None",
+  lyricswriter: "None",
+  released: "00/00/0000",
+  vocalprod: "None",
+  copyright: "None",
+  distributor: "None"
+};
 
 var musicPlaying = false; //Se alguma música estiver tocando, essa variável deve ser trre
 var player_active = false;
