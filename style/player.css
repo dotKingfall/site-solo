@@ -100,6 +100,32 @@
   border-right: 1px solid rgb(30, 30, 30);;
 }
 
+.songmetainfo{
+  width: 100%;
+  padding-left: 3px;
+}
+
+.songmetainfo tr{
+  cursor: pointer;
+}
+
+.songmetainfo tr td{
+  color: grey;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: color .1s;
+}
+
+.songmetainfo tr:hover td{
+  color: rgb(191, 64, 191);
+}
+
+.songmetainfo a{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .mainbuttons{
   margin-top: 10px;
   width: 100%;
@@ -121,7 +147,8 @@
 }
 
 .mainbuttons{
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .mainbuttons th{
