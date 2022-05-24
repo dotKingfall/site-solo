@@ -27,9 +27,15 @@ function shouldOverflow(){
   }
 }
 
+function loadInfo(ipath){ //REESCREVER ESSA FUNC
+  var info = document.getElementById("songinfo");
+  info.setAttribute('data', "aaaaaa");
+  alert(info.data);
+}
+
 function copysongname(){
   var copymessage = document.getElementById("copybutton").children[1];
-  navigator.clipboard.writeText(`${songname} - ${singer}`).then(() => {
+  navigator.clipboard.writeText(`${song.name} - ${song.singer}`).then(() => {
     if(copymessage.innerText === "COPIAR") copymessage.innerText = "COPIADO!";
   })
   .catch(() => {
@@ -48,9 +54,9 @@ function showPlayer(){
     setTimeout(()=>{ple.focus()}, 100);
   }
   else{
-    player_active = false;
     ple.style.transform = "translateX(-180px)";
     ple.style.visibility = "hidden";
+    player_active = false;
   }
 }
 
